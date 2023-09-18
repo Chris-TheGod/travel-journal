@@ -13,12 +13,18 @@ export const Card = ({
   return (
     <div className='card-container'>
       <div className='image-container'>
-        <img src={imageUrl} alt='' />
+        <img className='img' src={imageUrl} alt='' />
       </div>
       <div className='card-body'>
         <div className='country-container'>
-          <p className='country'>{location}</p>
-          <a href={googleMapsUrl}>View on Google Maps</a>
+          <div className='country'>
+            <p>{location}</p>
+          </div>
+          <div className='gmaps'>
+            <a className='gmaps-a' href={googleMapsUrl}>
+              View on Google Maps
+            </a>
+          </div>
         </div>
         <h2 className='title'>{title}</h2>
         <p className='date'>
